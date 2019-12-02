@@ -10,7 +10,7 @@ export default class Todo extends React.Component {
       return (
         <div>
         {this.props.todos.map(todo => (
-            <div className='todo-card' key={todo.id}>
+            <div className='todo-card' key={todo.id} style={todo.completed ? { textDecoration: 'line-through' } : null}>
                 <a href='#' onClick={this.props.done}>
                     {todo.task}
                 </a>
