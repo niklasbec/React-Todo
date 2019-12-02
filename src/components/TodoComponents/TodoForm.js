@@ -9,12 +9,12 @@ export default class TodoForm extends React.Component {
         return(
             <>
             <form>
-                <input type='text' name='todo-text' placeholder='New Todo'>
+                <input onChange={this.props.change} type='text' name='todo-text' placeholder='New Todo'>
                 
                 </input>
 
-                <button onClick={this.props.add}>Add todo</button>
-                <button>Clear completed</button>
+                <button type='submit' onClick={this.props.add}>Add todo</button>
+                <button onClick={this.props.clearComplete} >Clear completed</button>
             </form>
             </>
         )

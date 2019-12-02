@@ -9,7 +9,7 @@ export default class Todo extends React.Component {
     render() {
       return (
         <div>
-        {this.props.tasks.map(todo => (
+        {this.props.todos.map(todo => (
             <div className='todo-card' key={todo.id}>
                 <a href='#' onClick={this.props.done}>
                     {todo.task}

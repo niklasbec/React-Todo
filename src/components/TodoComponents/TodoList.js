@@ -11,8 +11,8 @@ class TodoList extends React.Component {
     render() {
       return (
         <div>
-          <Todo tasks={this.props.tasks} done={this.props.done}/>
-          <TodoForm add={this.add}/>
+          <Todo todos={this.props.todos} done={this.props.done}/>
+          <TodoForm add={this.props.add} change={this.props.change} clearComplete={this.props.clearComplete} />
         </div>
       );
     }
