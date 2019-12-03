@@ -38,19 +38,21 @@ class App extends React.Component {
   }
 
   done = id => {
-    let myTodos = this.state.myTodos
-    myTodos = myTodos.map(todo => {
-      console.log(todo.id);
-      console.log(id);
-      if (todo.id === id) {
-        todo.completed = !todo.completed
-        return todo
-      } else {
-        return todo
-      }
+    
+    this.setState({
+      myTodos: this.state.myTodos.map(todo => {
+        if (todo.id === id) {
+          console.log(this.state.myTodos);
+          return {
+            ...todo,
+            completed: !todo.completed
+          }
+          } else {
+            return todo
+            console.log(this.state.myTodos);
+          }
+      })
     })
-    this.setState({myTodos})
-    console.log(this.state);
   }
 
   add = (e) => {

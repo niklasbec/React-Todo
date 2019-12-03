@@ -11,7 +11,7 @@ export default class Todo extends React.Component {
         <div>
         {this.props.todos.map(todo => (
             <div className='todo-card' key={todo.id} style={todo.completed ? { textDecoration: 'line-through' } : null}>
-                <a href='#' onClick={this.props.done}>
+                <a href='#' key={todo.id} onClick={ () => this.props.done(todo.id)}>
                     {todo.task}
                 </a>
             </div>
